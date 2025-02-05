@@ -1,5 +1,5 @@
 
-// Handle login form submission
+//Handle login form submission
 document.getElementById("loginForm").addEventListener("submit", function (e) {
     e.preventDefault(); // Prevent page reload
 

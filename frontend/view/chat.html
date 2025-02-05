@@ -3,33 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat Room</title>
+    <title>Chat App</title>
     <link rel="stylesheet" href="../css/chat.css">
 </head>
 <body>
-    <h1>Chat Room</h1>
-    <form id="roomForm">
-        <label for="room">Select Room:</label>
-        <select id="room" required>
-            <option value="" disabled selected>Select a Room</option>
-            <option value="devops">DevOps</option>
-            <option value="cloud_computing">Cloud Computing</option>
-            <option value="covid19">COVID-19</option>
-            <option value="sports">Sports</option>
-            <option value="nodejs">NodeJS</option>
-        </select>
-        <button type="submit">Join Room</button>
-    </form>
+    <!-- Room Selection Section -->
+    <div id="roomSelection" class="hidden">
+        <h1>Chat App</h1>
+        <form id="roomForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Enter your username" required>
+            
+            <label for="room">Select Room:</label>
+            <select id="room" required>
+                <option value="" disabled selected>Select a Room</option>
+                <option value="devops">DevOps</option>
+                <option value="cloud_computing">Cloud Computing</option>
+                <option value="covid19">COVID-19</option>
+                <option value="sports">Sports</option>
+                <option value="nodejs">NodeJS</option>
+            </select>
+            <button type="submit">Join Chat Room</button>
+        </form>
+    </div>
 
-    <div id="chatInterface" style="display: none;">
-        <h2 id="currentRoom"></h2>
+    <!-- Chat Interface Section -->
+    <div id="chatInterface" class="hidden">
+        <h1>Chat App</h1>
+        <div id="chatRoomDetails">
+            <p id="roomName"></p>
+            <button id="leaveRoom">Leave Room</button>
+        </div>
         <div id="messages"></div>
+        <div id="typingIndicator" class="hidden">Someone is typing...</div>
         <form id="messageForm">
-            <input type="text" id="messageInput" placeholder="Enter message" required>
+            <input type="text" id="messageInput" placeholder="Type your message here..." required>
             <button type="submit">Send</button>
         </form>
     </div>
+
     <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
     <script src="../js/chat.js"></script>
 </body>
 </html>
+

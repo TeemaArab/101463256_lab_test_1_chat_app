@@ -1,22 +1,135 @@
+/* General Styling */
 body {
     font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Room Selection */
+#roomForm {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#roomForm label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#roomForm select {
+    padding: 8px;
+    margin-right: 10px;
+}
+
+#roomForm button {
+    padding: 8px 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#roomForm button:hover {
+    background-color: #0056b3;
+}
+
+/* Chat Interface */
+#chatInterface {
+    max-width: 600px;
+    width: 100%;
+    background: white;
     padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2 {
-    text-align: center;
-}
-
-form {
-    margin: 20px auto;
-    text-align: center;
+#chatInterface h2 {
+    margin-bottom: 20px;
 }
 
 #messages {
-    border: 1px solid #ccc;
-    height: 200px;
-    overflow-y: scroll;
-    margin: 10px auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
     padding: 10px;
-    max-width: 400px;
+    height: 300px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+}
+
+#messages div {
+    margin-bottom: 10px;
+}
+
+#messages div:nth-child(odd) {
+    background-color: #f1f1f1;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+/* Typing Indicator */
+#typingIndicator {
+    font-style: italic;
+    color: #666;
+    padding: 5px 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    display: none; /* Initially hidden */
+}
+
+/* Message Form */
+#messageForm {
+    display: flex;
+    gap: 10px;
+}
+
+#messageInput {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#messageForm button {
+    padding: 8px 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#messageForm button:hover {
+    background-color: #218838;
+}
+
+/* Leave Room Button */
+#leaveRoom {
+    display: block;
+    margin: 10px auto;
+    padding: 8px 16px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#leaveRoom:hover {
+    background-color: #c82333;
 }
