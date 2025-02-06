@@ -53,11 +53,11 @@ router.post("/login", async (req, res) => {
         }
 
        // Compare passwords
-        console.log("Password entered:", password); // Debug log for plain-text password
-        console.log("Hashed password in DB:", user.password); // Debug log for hashed password in MongoDB
+        console.log("Password entered:", password); 
+        console.log("Hashed password in DB:", user.password); 
 
 const isMatch = await bcrypt.compare(password, user.password);
-console.log("Password match result:", isMatch); // Debug log for the comparison result
+console.log("Password match result:", isMatch); /
 
 
         // Generate JWT token
