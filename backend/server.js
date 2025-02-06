@@ -59,8 +59,8 @@ io.on("connection", (socket) => {
         socket.to(room).emit("userTyping", { username });
     });
 
-    socket.on("stopTyping", ({ room, username }) => {
-        socket.to(room).emit("userStoppedTyping", { username });
+    socket.on("stopTyping", ({ room }) => {
+        socket.to(room).emit("userStoppedTyping");
     });
 
     socket.on("chatMessage", async ({ room, username, message }) => {
